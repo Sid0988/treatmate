@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TreatMate | Crafted for your FurMate</title>
+  
+  <!-- Google Fonts matching logo aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span>✨ Crafted with Love & Premium Ingredients for your FurMate ✨</span>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="header">
+    <div class="navbar-container">
+      
+      <!-- Brand Logo Section -->
+      <a href="#" class="brand-logo">
+        <div class="logo-wrapper">
+          <!-- Pop-up peeking pup on hover -->
+          <div class="peeking-dog">
+            <svg viewBox="0 0 100 100" class="dog-svg">
+              <!-- Pup head & ears -->
+              <path d="M20,50 Q10,20 35,25 Q50,15 65,25 Q90,20 80,50 Q85,75 50,85 Q15,75 20,50" fill="#E59E38"/>
+              <path d="M22,35 Q10,25 25,50" fill="#B86C1D"/>
+              <path d="M78,35 Q90,25 75,50" fill="#B86C1D"/>
+              <!-- Snout & Eyes -->
+              <ellipse cx="50" cy="60" rx="16" ry="12" fill="#FFF8EE"/>
+              <ellipse cx="50" cy="54" rx="6" ry="4" fill="#1E4332"/>
+              <circle cx="38" cy="45" r="4" fill="#1E4332"/>
+              <circle cx="62" cy="45" r="4" fill="#1E4332"/>
+              <circle cx="40" cy="43" r="1.5" fill="#FFF"/>
+              <circle cx="64" cy="43" r="1.5" fill="#FFF"/>
+            </svg>
+          </div>
+          <img src="/logo.png" alt="TreatMate Logo" class="logo-img">
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#treats" class="nav-link">Our Treats 🦴</a></li>
+          <li><a href="#why-us" class="nav-link">Why TreatMate</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          
+          <!-- Mobile CTA -->
+          <li class="mobile-cta">
+            <a href="#shop" class="btn-treats btn-mobile">
+              <span>Explore Menu</span> 🐾
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="nav-actions">
+        <a href="#shop" class="btn-treats">
+          <span>Shop Treats</span>
+          <svg class="heart-icon" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION: INTERACTIVE FLAVOR SWITCHER
+       ========================================== -->
+  <section class="hero-section" id="hero">
+    
+    <!-- Floating Background Decor -->
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+
+    <div class="hero-container">
+      
+      <!-- Left Column: Copy & Value Props -->
+      <div class="hero-content">
+        
+        <div class="hero-badge">
+          <span class="badge-sparkle">✨</span>
+          <span class="badge-text" id="hero-badge-text">100% Gluten-Free Treat</span>
+        </div>
+
+        <h1 class="hero-title">
+          Every wag tells a story.<br>
+          <span class="highlight-text" id="hero-title-highlight">Strawberry Yak Cheese</span> Puffs.
+        </h1>
+
+        <p class="hero-description" id="hero-desc">
+          Light, crunchy, and irresistibly delicious! Made from premium Himalayan-style yak milk, providing over 60% protein with less than 1% fat for a guilt-free reward.
+        </p>
+
+        <!-- Dynamic Product Highlight Tags -->
+        <div class="value-pills" id="value-pills">
+          <span class="pill">🧀 60%+ Protein</span>
+          <span class="pill">🍓 Less than 1% Fat</span>
+          <span class="pill">🦷 Healthy Teeth & Gums</span>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="hero-actions">
+          <a href="#shop" class="btn-primary-hero">
+            <span>Shop This Flavor</span>
+            <span class="paw-bounce">🐾</span>
+          </a>
+          <a href="#why-us" class="btn-secondary-hero">
+            <span>Learn Nutrition</span>
+            <span class="arrow-icon">→</span>
+          </a>
+        </div>
+
+        <!-- Flavor Selector Switcher Cards -->
+        <div class="flavor-switcher-wrapper">
+          <p class="switcher-label">Select Flavor Experience:</p>
+          <div class="flavor-options">
+            
+            <!-- Flavor 1: Strawberry Yak Cheese -->
+            <button class="flavor-btn active" data-flavor="strawberry">
+              <span class="flavor-emoji">🍓</span>
+              <div class="flavor-info">
+                <strong>Strawberry Yak Puffs</strong>
+                <small>High Protein Crunch</small>
+              </div>
+            </button>
+
+            <!-- Flavor 2: Roots & Berry Mix -->
+            <button class="flavor-btn" data-flavor="berry">
+              <span class="flavor-emoji">🫐</span>
+              <div class="flavor-info">
+                <strong>Roots & Berry Mix</strong>
+                <small>Goat Milk & Pumpkin</small>
+              </div>
+            </button>
+
+            <!-- Flavor 3: Seaweed Stick Mix -->
+            <button class="flavor-btn" data-flavor="seaweed">
+              <span class="flavor-emoji">🦴</span>
+              <div class="flavor-info">
+                <strong>Milk & Seaweed Stick</strong>
+                <small>Bone & Teeth Health</small>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Visual Product Showcase -->
+      <div class="hero-visual">
+        <div class="product-stage">
+          
+          <!-- Floating Feature Badges around Product -->
+          <div class="floating-tag tag-1" id="float-tag-1">
+            <span class="tag-icon">⚡</span>
+            <span class="tag-text">High Protein</span>
+          </div>
+
+          <div class="floating-tag tag-2" id="float-tag-2">
+            <span class="tag-icon">🌿</span>
+            <span class="tag-text">No Preservatives</span>
+          </div>
+
+          <!-- Interactive Main Product Hero Mockup -->
+          <div class="product-card-hero">
+            <div class="product-glow" id="product-glow"></div>
+            
+            <!-- SVG Dog Paw Illustration Container for Products -->
+            <div class="product-graphic" id="product-graphic">
+              <div class="flavor-icon-large" id="flavor-icon-display">🍓</div>
+              <div class="product-title-badge" id="product-badge-display">Strawberry Yak Cheese Puffs</div>
+            </div>
+
+            <!-- Tail Wagging Interactive Indicator -->
+            <div class="tail-wag-badge">
+              <span>🐶 Tail Wagging Approved!</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 3: FEATURED PRODUCTS COLLECTION
+       ========================================== -->
+  <section class="products-section" id="treats">
+    <div class="section-container">
+      
+      <!-- Section Heading -->
+      <div class="section-header">
+        <span class="section-badge">✨ TreatMate Signature Collection ✨</span>
+        <h2 class="section-title">Wholesome Indulgence for Every FurMate</h2>
+        <p class="section-subtitle">
+          Carefully crafted with functional nutrition, premium ingredients, and delicious taste your dog will keep coming back for.
+        </p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+
+        <!-- Product Card 1: Yak Cheese Puffs -->
+        <div class="product-card" data-category="puffs">
+          <div class="card-badge badge-popular">Best Seller 🔥</div>
+          <div class="card-image-wrapper">
+            <div class="product-bg-circle circle-strawberry"></div>
+            <span class="product-emoji-hero">🍓</span>
+            <button class="quick-view-btn" data-product="puffs">Quick Nutrition View 🔍</button>
+          </div>
+          
+          <div class="card-content">
+            <div class="rating-stars">★★★★★ <span>(4.9/5)</span></div>
+            <h3 class="product-name">Yak Cheese Puffs – Strawberry</h3>
+            <p class="product-tagline">Light. Crunchy. Irresistibly Delicious.</p>
+            
+            <ul class="product-features-list">
+              <li><span>✓</span> Over 60% Protein & &lt;1% Fat</li>
+              <li><span>✓</span> 100% Gluten-Free</li>
+              <li><span>✓</span> Supports Healthy Teeth & Gums</li>
+            </ul>
+
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="currency">₹</span>349
+                <small>Premium Jar</small>
+              </div>
+              <button class="add-to-cart-btn" data-name="Strawberry Yak Cheese Puffs">
+                <span>Add to Bowl</span> 🐾
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2: Goat Milk Roots & Berry Mix -->
+        <div class="product-card" data-category="milk">
+          <div class="card-badge badge-organic">Digestive Care 🌿</div>
+          <div class="card-image-wrapper">
+            <div class="product-bg-circle circle-berry"></div>
+            <span class="product-emoji-hero">🫐</span>
+            <button class="quick-view-btn" data-product="berry">Quick Nutrition View 🔍</button>
+          </div>
+          
+          <div class="card-content">
+            <div class="rating-stars">★★★★★ <span>(5.0/5)</span></div>
+            <h3 class="product-name">Goat Milk – Roots & Berry Mix</h3>
+            <p class="product-tagline">Nature's Goodness in Every Bite.</p>
+            
+            <ul class="product-features-list">
+              <li><span>✓</span> Premium Goat Milk Formula</li>
+              <li><span>✓</span> Real Blueberries, Pumpkin & Sweet Potato</li>
+              <li><span>✓</span> Rich Source of Protein & Collagen</li>
+            </ul>
+
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="currency">₹</span>399
+                <small>Nutritional Pack</small>
+              </div>
+              <button class="add-to-cart-btn" data-name="Roots & Berry Mix">
+                <span>Add to Bowl</span> 🐾
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3: Milk Calcium & Seaweed Stick -->
+        <div class="product-card" data-category="chew">
+          <div class="card-badge badge-health">Dental Care 🦴</div>
+          <div class="card-image-wrapper">
+            <div class="product-bg-circle circle-seaweed"></div>
+            <span class="product-emoji-hero">🦴</span>
+            <button class="quick-view-btn" data-product="seaweed">Quick Nutrition View 🔍</button>
+          </div>
+          
+          <div class="card-content">
+            <div class="rating-stars">★★★★★ <span>(4.8/5)</span></div>
+            <h3 class="product-name">Milk Calcium & Seaweed Stick Mix</h3>
+            <p class="product-tagline">Strong Bones. Healthy Teeth. Happy Dogs.</p>
+            
+            <ul class="product-features-list">
+              <li><span>✓</span> Dual-Flavour Wellness Chew</li>
+              <li><span>✓</span> Rich in Essential Minerals</li>
+              <li><span>✓</span> Encourages Healthy Chewing Habits</li>
+            </ul>
+
+            <div class="card-footer">
+              <div class="price-tag">
+                <span class="currency">₹</span>299
+                <small>Chew Sticks</small>
+              </div>
+              <button class="add-to-cart-btn" data-name="Milk Calcium & Seaweed Stick">
+                <span>Add to Bowl</span> 🐾
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 4: WHY CHOOSE TREATMATE
+       ========================================== -->
+  <section class="why-us-section" id="why-us">
+    <div class="section-container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-badge">🌿 Pure Nutrition, No Compromise 🌿</span>
+        <h2 class="section-title">Why Dog Parents Choose TreatMate</h2>
+        <p class="section-subtitle">
+          We combine traditional Himalayan recipes with modern functional nutrition to create treats that keep tails wagging and bodies thriving.
+        </p>
+      </div>
+
+      <!-- Feature Grid Cards -->
+      <div class="features-grid">
+
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🧀</div>
+          <h3 class="feature-title">High Protein, Low Fat</h3>
+          <p class="feature-desc">
+            With over 60% protein and less than 1% fat, our treats deliver clean energy without unnecessary calories or weight gain.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🌾</div>
+          <h3 class="feature-title">100% Gluten & Grain Free</h3>
+          <p class="feature-desc">
+            Gentle on sensitive stomachs! Free from corn, wheat, soy, or artificial preservatives. Just pure, wholesome ingredients.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🦷</div>
+          <h3 class="feature-title">Dental & Joint Health</h3>
+          <p class="feature-desc">
+            Formulated with natural minerals, milk calcium, and collagen to clean teeth, fight tartar, and support strong bones.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">❤️</div>
+          <h3 class="feature-title">Crafted with Love</h3>
+          <p class="feature-desc">
+            Tested and approved by vet experts and dog lovers to ensure top safety, crunchiness, and irresistible aroma.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHATSAPP ORDER MODAL (CUSTOMER DETAILS)
+       ========================================== -->
+  <div class="modal-overlay" id="whatsapp-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="wa-modal-close">&times;</button>
+      
+      <div class="wa-modal-header">
+        <span class="wa-icon">💬</span>
+        <h3>Order via WhatsApp</h3>
+        <p>Fill in your details below to place your order directly with our team on WhatsApp!</p>
+      </div>
+
+      <form id="whatsapp-order-form">
+        <!-- Hidden field for product name -->
+        <input type="hidden" id="wa-product-name" value="Strawberry Yak Cheese Puffs">
+
+        <div class="form-group">
+          <label for="wa-user-name">Your Name *</label>
+          <input type="text" id="wa-user-name" placeholder="e.g. Rahul Sharma" required>
+        </div>
+
+        <div class="form-group">
+          <label for="wa-pet-info">Dog's Name & Breed</label>
+          <input type="text" id="wa-pet-info" placeholder="e.g. Bruno (Golden Retriever)">
+        </div>
+
+        <div class="form-group">
+          <label for="wa-address">Delivery City / Address *</label>
+          <input type="text" id="wa-address" placeholder="e.g. Indiranagar, Bengaluru" required>
+        </div>
+
+        <div class="form-group">
+          <label for="wa-quantity">Quantity</label>
+          <select id="wa-quantity">
+            <option value="1 Pack">1 Pack</option>
+            <option value="2 Packs (Popular)">2 Packs (Save 10%)</option>
+            <option value="3+ Packs (Bulk Treat)">3+ Packs (Free Delivery)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-send-whatsapp">
+          <span>Continue to WhatsApp</span>
+          <span class="wa-btn-icon">📲</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SECTION 5: FOUNDER'S STORY & BRAND ORIGIN
+       ========================================== -->
+  <section class="story-section" id="our-story">
+    <div class="section-container">
+      <div class="story-wrapper">
+        
+        <!-- Story Visual Stage -->
+        <div class="story-image-column">
+          <div class="story-card-frame">
+            <div class="story-photo-placeholder">
+              <span class="story-hero-emoji">🐶❤️👩‍🍳</span>
+            </div>
+            <div class="story-floating-badge">
+              <span class="badge-icon">🏆</span>
+              <div class="badge-text">
+                <strong>Crafted by Pet Parents</strong>
+                <small>Tested & Vet Approved</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Narrative Column -->
+        <div class="story-content-column">
+          <span class="section-badge">✨ Heart & Himalayan Heritage ✨</span>
+          <h2 class="section-title">Born from Love, Backed by Science</h2>
+          
+          <p class="story-paragraph">
+            Like many pet parents, we searched tirelessly for treats that weren't packed with hidden fillers, artificial flavors, or wheat gluten. We wanted a reward that did more than just taste good—we wanted real functional nutrition.
+          </p>
+
+          <p class="story-paragraph">
+            That’s how <strong>TreatMate</strong> was born. Inspired by ancient Himalayan yak cheese traditions, we perfected recipes that combine high-protein yak milk, soothing goat milk, and superfoods like blueberries, pumpkin, and seaweed.
+          </p>
+
+          <!-- Core Values Bar -->
+          <div class="story-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Gluten-Free</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">0%</span>
+              <span class="stat-label">Artificial Additives</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">60%+</span>
+              <span class="stat-label">Clean Protein</span>
+            </div>
+          </div>
+
+          <!-- Signature Callout -->
+          <div class="founder-signature-box">
+            <p class="quote-text">
+              "Because every fur child deserves treats made with the same purity and care we demand for ourselves."
+            </p>
+            <div class="founder-meta">
+              <strong>The TreatMate Founders</strong>
+              <span>Devoted Pet Parents & Nutrition Enthusiasts</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 6: CUSTOMER REVIEWS & HAPPY TAILS
+       ========================================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <span class="section-badge">🐾 Happy Tails & Real Reviews 🐾</span>
+        <h2 class="section-title">Loved by Dogs, Trusted by Parents</h2>
+        <p class="section-subtitle">
+          See what fellow dog owners have to say about TreatMate's crunchy, healthy rewards.
+        </p>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div class="reviews-grid">
+
+        <!-- Review Card 1 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "My Golden Retriever Max is super picky with treats, but he went crazy for the Strawberry Yak Puffs! Love that they are high protein and low fat."
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">🐶</div>
+            <div>
+              <strong>Priya M.</strong>
+              <small>Pet Parent to Max (Golden Retriever)</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The Goat Milk Roots & Berry mix solved our digestion issues. Her coat looks shinier and she loves the taste as a daily topper!"
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">🐕</div>
+            <div>
+              <strong>Ankit S.</strong>
+              <small>Pet Parent to Bella (Beagle)</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The Milk & Seaweed sticks keep my Indie dog occupied while cleaning his teeth. Great natural alternative to synthetic chews."
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">🦮</div>
+            <div>
+              <strong>Sneha R.</strong>
+              <small>Pet Parent to Rocky (Indie)</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 7: FOOTER & PERSISTENT WHATSAPP BAR
+       ========================================== -->
+  <footer class="main-footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        
+        <!-- Brand Column -->
+        <div class="footer-col brand-col">
+          <a href="#" class="footer-logo">
+            <span class="logo-icon">🐾</span> TreatMate
+          </a>
+          <p class="footer-tagline">
+            Functional Himalayan pet treats crafted for health, vitality, and happy wags.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Instagram">📸</a>
+            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+            <a href="#" class="social-icon" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#treats">Our Treats</a></li>
+            <li><a href="#why-us">Why TreatMate</a></li>
+            <li><a href="#our-story">Founder Story</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Product Collection -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Our Collection</h4>
+          <ul class="footer-links">
+            <li><a href="#treats">Yak Cheese Puffs</a></li>
+            <li><a href="#treats">Roots & Berry Mix</a></li>
+            <li><a href="#treats">Seaweed & Milk Sticks</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Ordering Info -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Order & Contact</h4>
+          <p class="footer-contact-item">💬 WhatsApp Direct Orders Available</p>
+          <p class="footer-contact-item">📧 contactus@treatmate.com</p>
+          <p class="footer-contact-item">📍 B/706, SURVEY 81,82, GAMI - TEESTA, HISSA- 1,2,5, PISARVE, Panvel (Rural), Raigad, Maharashtra-410208 </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 TreatMate. All rights reserved. Built for pet parents with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom WhatsApp Order Button (Visible on Mobile & Desktop) -->
+  <a href="#" class="sticky-wa-float btn-primary-hero" aria-label="Order on WhatsApp">
+    <span class="wa-float-icon">💬</span>
+    <span class="wa-float-text">Order via WhatsApp</span>
+  </a>
+
+  <!-- Quick View Modal Structure -->
+  <div class="modal-overlay" id="nutrition-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Content inserted dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
